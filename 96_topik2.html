@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나무 한국어</title>
+    <style>
+        /* 웹페이지 전체에 이미지만 표시하기 위한 스타일 */
+        body {
+            /* 기본 여백 제거 */
+            margin: 0;
+            padding: 0;
+            /* 이미지를 중앙에 배치하기 위해 Flexbox 사용 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 뷰포트 높이보다 작을 때 중앙 정렬을 위해 최소 높이 설정 */
+            min-height: 100vh; 
+            /* 배경색 설정 (이미지 주변의 빈 공간) */
+            background-color: #000;
+            /* 스크롤 허용: overflow: hidden; 속성 제거 */
+            overflow: auto; 
+        }
+        
+        /* 이미지 스타일링 */
+        .full-screen-image {
+            /* 이미지가 뷰포트의 너비를 벗어나지 않도록 최대 크기 지정 */
+            max-width: 100%;
+            /* 뷰포트 높이 제한을 해제하여, 이미지가 크면 스크롤 가능하도록 함 */
+            /* max-height: 100vh; 대신 auto를 사용하여 원본 크기 존중 */
+            height: auto;
+            width: auto;
+            /* 이미지 비율을 유지하며 컨테이너에 맞춤 */
+            object-fit: contain; 
+            /* 이미지와 화면 가장자리에 약간의 여백을 주어 중앙에 잘 보이게 함 */
+            padding: 20px; 
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Imgur 다이렉트 링크 형식(i.imgur.com)을 사용하여 이미지를 직접 삽입합니다.
+    -->
+    <img 
+        src="https://i.imgur.com/ES5pjtI.png" 
+        alt="요청된 이미지" 
+        class="full-screen-image"
+        onerror="this.onerror=null; this.src='https://i.imgur.com/ES5pjtI.png';"
+    >
+
+</body>
+</html>
